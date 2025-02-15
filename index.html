@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declaración de Amor 💖</title>
+    <link rel="stylesheet" href="inhdex.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">💌 Mi Querida amada  💌</h1>
+        <p class="message">Eres la razón de mis sonrisas y la luz de mis días. ¿Me aceptarías en tu corazón? 💕</p>
+        <div class="buttons">
+            <button class="btn yes">Sí quiero 💖</button>
+            <button class="btn no">No... 😢</button>
+        </div>
+        <p class="response"></p>
+    </div>
+
+    <script>
+        document.querySelector(".yes").addEventListener("click", function() {
+            document.querySelector(".response").textContent = "¡Sabía que dirías que sí! 😍💘";
+        });
+
+        document.querySelector(".no").addEventListener("mouseover", function() {
+            this.style.position = "absolute";
+            this.style.top = Math.random() * window.innerHeight + "2px";
+            this.style.left = Math.random() * window.innerWidth + "2px";
+        });
+    </script>
+</body>
+</html>
+
