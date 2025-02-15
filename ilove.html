@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta de Confesión de Amor</title>
+    <link rel="stylesheet" href="ilove.css">
+</head>
+<body>
+
+    <div class="carta">
+        <h1>💖 Para Ti 💖</h1>
+        <p>Desde hace tiempo quería decirte algo muy especial...</p>
+        <p>Cada momento contigo ilumina mi mundo y llena mi corazón de alegría.</p>
+        <p>Eres la persona que hace latir más fuerte mi corazón. 💓</p>
+        <p>Así que hoy, con mucha emoción, quiero preguntarte...</p>
+        <h2>¿Quieres ser mi novia? 💑</h2>
+        <button id="siBtn" onclick="aceptarAmor()">💘 Sí, quiero 💘</button>
+    </div>
+
+    <div id="corazones"></div>
+
+    <script>
+        function aceptarAmor() {
+            let container = document.getElementById("corazones");
+            for (let i = 0; i < 30; i++) {
+                let heart = document.createElement("div");
+                heart.classList.add("corazon");
+                heart.style.left = Math.random() * 100 + "vw";
+                heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+                container.appendChild(heart);
+                setTimeout(() => { heart.remove(); }, 5000);
+            }
+            alert("¡Me haces la persona más feliz del mundo! 💖💖💖");
+        }
+    </script>
+
+</body>
+</html>
